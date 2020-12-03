@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Calendar | Drafts Script Reference</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for Drafts Script Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -75,12 +75,12 @@
 					<a href="#example-event-creation" id="example-event-creation" style="color: inherit; text-decoration: none;">
 						<h4>Example: Event Creation</h4>
 					</a>
-					<pre><code class="language-javascript"><span class="hljs-keyword">var</span> calendar = Calendar.findOrCreate(<span class="hljs-string">"Activities"</span>);
+					<pre><code class="language-javascript"><span class="hljs-keyword">var</span> calendar = Calendar.findOrCreate(<span class="hljs-string">&quot;Activities&quot;</span>);
 <span class="hljs-keyword">var</span> event = calendar.createEvent();
-event.title = <span class="hljs-string">"Dinner Party"</span>;
-event.notes = <span class="hljs-string">"Bring side dish."</span>;
-event.startDate = <span class="hljs-built_in">Date</span>.parse(<span class="hljs-string">"7pm next friday"</span>);
-event.endDate = <span class="hljs-built_in">Date</span>.parse(<span class="hljs-string">"10pm next friday"</span>);
+event.title = <span class="hljs-string">&quot;Dinner Party&quot;</span>;
+event.notes = <span class="hljs-string">&quot;Bring side dish.&quot;</span>;
+event.startDate = <span class="hljs-built_in">Date</span>.parse(<span class="hljs-string">&quot;7pm next friday&quot;</span>);
+event.endDate = <span class="hljs-built_in">Date</span>.parse(<span class="hljs-string">&quot;10pm next friday&quot;</span>);
 event.isAllDay = <span class="hljs-literal">false</span>;
 <span class="hljs-keyword">if</span> (!event.update()) {
   <span class="hljs-built_in">console</span>.log(event.lastError);
@@ -89,7 +89,7 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 						<h1>Example: Reading Calendar Events</h1>
 					</a>
 					<pre><code class="language-javascript"><span class="hljs-comment">// load a calendar</span>
-<span class="hljs-keyword">let</span> cal = Calendar.find(<span class="hljs-string">"Test"</span>);
+<span class="hljs-keyword">let</span> cal = Calendar.find(<span class="hljs-string">&quot;Test&quot;</span>);
 <span class="hljs-comment">// loop over events in the last 30 days and alert the name of each.</span>
 <span class="hljs-keyword">if</span> (cal) {
     <span class="hljs-keyword">let</span> events = cal.events((<span class="hljs-number">30</span>).days().ago(), <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
@@ -111,36 +111,39 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="calendar.html#allowscontentmodificationx" class="tsd-kind-icon">allows<wbr>Content<wbr>Modificationx</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="calendar.html#isimmutable" class="tsd-kind-icon">is<wbr>Immutable</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="calendar.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="calendar.html#allowscontentmodificationx" class="tsd-kind-icon">allows<wbr>Content<wbr>Modificationx</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="calendar.html#isimmutable" class="tsd-kind-icon">is<wbr>Immutable</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="calendar.html#title" class="tsd-kind-icon">title</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="calendar.html#createevent" class="tsd-kind-icon">create<wbr>Event</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="calendar.html#events" class="tsd-kind-icon">events</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="calendar.html#update" class="tsd-kind-icon">update</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported"><a href="calendar.html#default" class="tsd-kind-icon">default</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported"><a href="calendar.html#find" class="tsd-kind-icon">find</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported"><a href="calendar.html#findorcreate" class="tsd-kind-icon">find<wbr>OrCreate</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported"><a href="calendar.html#getallcalendars" class="tsd-kind-icon">get<wbr>All<wbr>Calendars</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#createevent" class="tsd-kind-icon">create<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#events" class="tsd-kind-icon">events</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="calendar.html#default" class="tsd-kind-icon">default</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="calendar.html#find" class="tsd-kind-icon">find</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="calendar.html#findorcreate" class="tsd-kind-icon">find<wbr>OrCreate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="calendar.html#getallcalendars" class="tsd-kind-icon">get<wbr>All<wbr>Calendars</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="allowscontentmodificationx" class="tsd-anchor"></a>
 					<h3>allows<wbr>Content<wbr>Modificationx</h3>
 					<div class="tsd-signature tsd-kind-icon">allows<wbr>Content<wbr>Modificationx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L40">Calendar.d.ts:40</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -148,11 +151,14 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="isimmutable" class="tsd-anchor"></a>
 					<h3>is<wbr>Immutable</h3>
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Immutable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L44">Calendar.d.ts:44</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -160,25 +166,31 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="title" class="tsd-anchor"></a>
 					<h3>title</h3>
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L36">Calendar.d.ts:36</a></li>
+						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="createevent" class="tsd-anchor"></a>
 					<h3>create<wbr>Event</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">create<wbr>Event<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="event.html" class="tsd-signature-type">Event</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L54">Calendar.d.ts:54</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -189,15 +201,18 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="events" class="tsd-anchor"></a>
 					<h3>events</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">events<span class="tsd-signature-symbol">(</span>startDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, endDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L59">Calendar.d.ts:59</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -217,15 +232,18 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="update" class="tsd-anchor"></a>
 					<h3>update</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L49">Calendar.d.ts:49</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -236,15 +254,18 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="default" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> default</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="calendar.html" class="tsd-signature-type">Calendar</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L79">Calendar.d.ts:79</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -255,15 +276,18 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="find" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> find</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">find<span class="tsd-signature-symbol">(</span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="calendar.html" class="tsd-signature-type">Calendar</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L69">Calendar.d.ts:69</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -276,22 +300,22 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 									<h5>title: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="calendar.html" class="tsd-signature-type">Calendar</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <a href="calendar.html" class="tsd-signature-type">Calendar</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="findorcreate" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> find<wbr>OrCreate</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">find<wbr>OrCreate<span class="tsd-signature-symbol">(</span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="calendar.html" class="tsd-signature-type">Calendar</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L64">Calendar.d.ts:64</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -308,15 +332,18 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="getallcalendars" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>All<wbr>Calendars</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Calendars<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="calendar.html" class="tsd-signature-type">Calendar</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Calendar.d.ts#L74">Calendar.d.ts:74</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -341,37 +368,37 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-is-not-exported">
+					<li class="current tsd-kind-class">
 						<a href="calendar.html" class="tsd-kind-icon">Calendar</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="calendar.html#allowscontentmodificationx" class="tsd-kind-icon">allows<wbr>Content<wbr>Modificationx</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="calendar.html#isimmutable" class="tsd-kind-icon">is<wbr>Immutable</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="calendar.html#title" class="tsd-kind-icon">title</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="calendar.html#createevent" class="tsd-kind-icon">create<wbr>Event</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="calendar.html#events" class="tsd-kind-icon">events</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="calendar.html#update" class="tsd-kind-icon">update</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="calendar.html#default" class="tsd-kind-icon">default</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="calendar.html#find" class="tsd-kind-icon">find</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="calendar.html#findorcreate" class="tsd-kind-icon">find<wbr>OrCreate</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="calendar.html#getallcalendars" class="tsd-kind-icon">get<wbr>All<wbr>Calendars</a>
 							</li>
 						</ul>
@@ -388,57 +415,15 @@ event.isAllDay = <span class="hljs-literal">false</span>;
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>

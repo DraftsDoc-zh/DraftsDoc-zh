@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>FileManager | Drafts Script Reference</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for Drafts Script Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -71,21 +71,21 @@
 							<h1>FileManager</h1>
 						</a>
 					</div>
-					<p>FileManager objects can be used to read from or write to files in either the local Drafts app Documents directory (as visible in the <code>Files.app</code>), or iCloud Drive (inside the <code>Drafts</code> folder).</p>
+					<p>FileManager objects can be used to read from or write to files in either the local Drafts app Documents directory, or iCloud Drive (inside the <code>Drafts</code> folder).Note that local files are not visible on iOS, and are only available for reading and writing via scripting.</p>
 					<a href="#example" id="example" style="color: inherit; text-decoration: none;">
 						<h3>Example</h3>
 					</a>
 					<pre><code class="language-javascript"><span class="hljs-comment">// create a local file in App documents</span>
 <span class="hljs-keyword">let</span> fmLocal = FileManager.createLocal(); <span class="hljs-comment">// Local file in app container</span>
-<span class="hljs-keyword">let</span> success = fmLocal.writeString(<span class="hljs-string">"/ScriptedFile.txt"</span>, <span class="hljs-string">"This is the file  * content"</span>);
+<span class="hljs-keyword">let</span> success = fmLocal.writeString(<span class="hljs-string">&quot;/ScriptedFile.txt&quot;</span>, <span class="hljs-string">&quot;This is the file  * content&quot;</span>);
 
 <span class="hljs-comment">// read from file in iCloud</span>
 <span class="hljs-keyword">let</span> fmCloud = FileManager.createCloud(); <span class="hljs-comment">// iCloud</span>
-<span class="hljs-keyword">let</span> content = fmCloud.readString(<span class="hljs-string">"/Test Folder/Test.txt"</span>)
+<span class="hljs-keyword">let</span> content = fmCloud.readString(<span class="hljs-string">&quot;/Test Folder/Test.txt&quot;</span>)
 
 <span class="hljs-comment">// create a directory, and move a file to it</span>
-fmCloud.createDirectory(<span class="hljs-string">"My Folder"</span>, <span class="hljs-string">"/"</span>);
-fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="hljs-string">"/My Folder/TestFile.txt"</span>, <span class="hljs-literal">false</span>);</code></pre>
+fmCloud.createDirectory(<span class="hljs-string">&quot;My Folder&quot;</span>, <span class="hljs-string">&quot;/&quot;</span>);
+fmCloud.moveItem(<span class="hljs-string">&quot;/TestFile.txt&quot;</span>, <span class="hljs-string">&quot;/My Folder/TestFile.txt&quot;</span>, <span class="hljs-literal">false</span>);</code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -100,36 +100,124 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="filemanager.html#lasterror" class="tsd-kind-icon">last<wbr>Error</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="filemanager.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Methods</h3>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="filemanager.html#copyitem" class="tsd-kind-icon">copy<wbr>Item</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="filemanager.html#createcloud" class="tsd-kind-icon">create<wbr>Cloud</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="filemanager.html#createdirectory" class="tsd-kind-icon">create<wbr>Directory</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="filemanager.html#createlocal" class="tsd-kind-icon">create<wbr>Local</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="filemanager.html#listcontents" class="tsd-kind-icon">list<wbr>Contents</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="filemanager.html#moveitem" class="tsd-kind-icon">move<wbr>Item</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="filemanager.html#readstring" class="tsd-kind-icon">read<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="filemanager.html#writestring" class="tsd-kind-icon">write<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported"><a href="filemanager.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="filemanager.html#basepath" class="tsd-kind-icon">base<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="filemanager.html#baseurl" class="tsd-kind-icon">baseURL</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="filemanager.html#lasterror" class="tsd-kind-icon">last<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Attribute Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#getcreationdate" class="tsd-kind-icon">get<wbr>Creation<wbr>Date</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#getmodificationdate" class="tsd-kind-icon">get<wbr>Modification<wbr>Date</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#gettags" class="tsd-kind-icon">get<wbr>Tags</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#setcreationdate" class="tsd-kind-icon">set<wbr>Creation<wbr>Date</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#setmodificationdate" class="tsd-kind-icon">set<wbr>Modification<wbr>Date</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#settags" class="tsd-kind-icon">set<wbr>Tags</a></li>
+							</ul>
+							<h3>Other Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#copyitem" class="tsd-kind-icon">copy<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#createdirectory" class="tsd-kind-icon">create<wbr>Directory</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#listcontents" class="tsd-kind-icon">list<wbr>Contents</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#moveitem" class="tsd-kind-icon">move<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#readjson" class="tsd-kind-icon">readJSON</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#readstring" class="tsd-kind-icon">read<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#writejson" class="tsd-kind-icon">writeJSON</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="filemanager.html#writestring" class="tsd-kind-icon">write<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="filemanager.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="filemanager.html#createcloud" class="tsd-kind-icon">create<wbr>Cloud</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="filemanager.html#createlocal" class="tsd-kind-icon">create<wbr>Local</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>File<wbr>Manager<span class="tsd-signature-symbol">(</span>isLocal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="filemanager.html" class="tsd-signature-type">FileManager</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L146">FileManager.d.ts:146</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create new instance.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>isLocal: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>If <code>true</code>, the <code>FileManager</code> will be using the to the local Drafts app documents directory as its root directory, as it appears in the &quot;On my …&quot; area in the <code>Files.app</code>. If <code>false</code>, it will use the Drafts5 iCloud folder as its root directory.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="filemanager.html" class="tsd-signature-type">FileManager</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="basepath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> base<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">base<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L46">FileManager.d.ts:46</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The base POSIX-style path to the directory used by this FileManager.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="baseurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> baseURL</h3>
+					<div class="tsd-signature tsd-kind-icon">baseURL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L41">FileManager.d.ts:41</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The base local URL (<code>file:///</code> format) to the directory used by this FileManager.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="lasterror" class="tsd-anchor"></a>
 					<h3>last<wbr>Error</h3>
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L26">FileManager.d.ts:26</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -138,17 +226,200 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Attribute Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcreationdate" class="tsd-anchor"></a>
+					<h3>get<wbr>Creation<wbr>Date</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Creation<wbr>Date<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L101">FileManager.d.ts:101</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get creation date of file at path.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getmodificationdate" class="tsd-anchor"></a>
+					<h3>get<wbr>Modification<wbr>Date</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Modification<wbr>Date<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L108">FileManager.d.ts:108</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get modification date of file at path.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gettags" class="tsd-anchor"></a>
+					<h3>get<wbr>Tags</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tags<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L140">FileManager.d.ts:140</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get tags on file at path.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setcreationdate" class="tsd-anchor"></a>
+					<h3>set<wbr>Creation<wbr>Date</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Creation<wbr>Date<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L116">FileManager.d.ts:116</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set creation date of file at path. Returns true if successful, false if not.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>date: <span class="tsd-signature-type">Date</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setmodificationdate" class="tsd-anchor"></a>
+					<h3>set<wbr>Modification<wbr>Date</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Modification<wbr>Date<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L124">FileManager.d.ts:124</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set modification date of file at path. Returns true if successful, false if not.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>date: <span class="tsd-signature-type">Date</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="settags" class="tsd-anchor"></a>
+					<h3>set<wbr>Tags</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Tags<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tags<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L132">FileManager.d.ts:132</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set tags on the file at path.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tags: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="copyitem" class="tsd-anchor"></a>
 					<h3>copy<wbr>Item</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">copy<wbr>Item<span class="tsd-signature-symbol">(</span>fromPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, toPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, overwrite<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L94">FileManager.d.ts:94</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -174,34 +445,18 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="createcloud" class="tsd-anchor"></a>
-					<h3>create<wbr>Cloud</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Cloud<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="filemanager.html" class="tsd-signature-type">FileManager</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Convenience method to create iCloud file manager.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <a href="filemanager.html" class="tsd-signature-type">FileManager</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="createdirectory" class="tsd-anchor"></a>
 					<h3>create<wbr>Directory</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">create<wbr>Directory<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L78">FileManager.d.ts:78</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -221,34 +476,18 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="createlocal" class="tsd-anchor"></a>
-					<h3>create<wbr>Local</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Local<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="filemanager.html" class="tsd-signature-type">FileManager</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Convenience method to create local file manager.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <a href="filemanager.html" class="tsd-signature-type">FileManager</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="listcontents" class="tsd-anchor"></a>
 					<h3>list<wbr>Contents</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">list<wbr>Contents<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L73">FileManager.d.ts:73</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -265,15 +504,18 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="moveitem" class="tsd-anchor"></a>
 					<h3>move<wbr>Item</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">move<wbr>Item<span class="tsd-signature-symbol">(</span>fromPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, toPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, overwrite<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L86">FileManager.d.ts:86</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -299,15 +541,49 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="readjson" class="tsd-anchor"></a>
+					<h3>readJSON</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">readJSON<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L63">FileManager.d.ts:63</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reads the contents of a JSON formatted file at the path. Returns <code>undefined</code> value if the file does not exist or could not be read and parsed as JSON. Contents could be an object, array of objects, etc., depending on the content of the JSON file.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>should begin with a <code>/</code> and be relative to the root directory of the FileManager.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="readstring" class="tsd-anchor"></a>
 					<h3>read<wbr>String</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">read<wbr>String<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L52">FileManager.d.ts:52</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -323,22 +599,53 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">undefined</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="writejson" class="tsd-anchor"></a>
+					<h3>writeJSON</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">writeJSON<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, content<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L68">FileManager.d.ts:68</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Write the contents to the path in JSON format. Returns true if successful, false if the file could not be written successfully. This will override existing files!</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>content: <span class="tsd-signature-type">object</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="writestring" class="tsd-anchor"></a>
 					<h3>write<wbr>String</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">write<wbr>String<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, content<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L57">FileManager.d.ts:57</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -358,15 +665,18 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="create" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> create</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>isLocal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="filemanager.html" class="tsd-signature-type">FileManager</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L146">FileManager.d.ts:146</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -386,6 +696,50 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="createcloud" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Cloud</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Cloud<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="filemanager.html" class="tsd-signature-type">FileManager</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L36">FileManager.d.ts:36</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convenience method to create iCloud file manager.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="filemanager.html" class="tsd-signature-type">FileManager</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="createlocal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Local</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Local<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="filemanager.html" class="tsd-signature-type">FileManager</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/FileManager.d.ts#L31">FileManager.d.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convenience method to create local file manager. Note that local files are not visible on iOS in the Files app and are only available through the use of scripting.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="filemanager.html" class="tsd-signature-type">FileManager</a></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -400,38 +754,71 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-is-not-exported">
+					<li class="current tsd-kind-class">
 						<a href="filemanager.html" class="tsd-kind-icon">File<wbr>Manager</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="filemanager.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="filemanager.html#basepath" class="tsd-kind-icon">base<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="filemanager.html#baseurl" class="tsd-kind-icon">baseURL</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="filemanager.html#lasterror" class="tsd-kind-icon">last<wbr>Error</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="filemanager.html#copyitem" class="tsd-kind-icon">copy<wbr>Item</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="filemanager.html#createcloud" class="tsd-kind-icon">create<wbr>Cloud</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="filemanager.html#createdirectory" class="tsd-kind-icon">create<wbr>Directory</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="filemanager.html#createlocal" class="tsd-kind-icon">create<wbr>Local</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="filemanager.html#getcreationdate" class="tsd-kind-icon">get<wbr>Creation<wbr>Date</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="filemanager.html#getmodificationdate" class="tsd-kind-icon">get<wbr>Modification<wbr>Date</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="filemanager.html#gettags" class="tsd-kind-icon">get<wbr>Tags</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="filemanager.html#listcontents" class="tsd-kind-icon">list<wbr>Contents</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="filemanager.html#moveitem" class="tsd-kind-icon">move<wbr>Item</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="filemanager.html#readjson" class="tsd-kind-icon">readJSON</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="filemanager.html#readstring" class="tsd-kind-icon">read<wbr>String</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="filemanager.html#setcreationdate" class="tsd-kind-icon">set<wbr>Creation<wbr>Date</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="filemanager.html#setmodificationdate" class="tsd-kind-icon">set<wbr>Modification<wbr>Date</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="filemanager.html#settags" class="tsd-kind-icon">set<wbr>Tags</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="filemanager.html#writejson" class="tsd-kind-icon">writeJSON</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="filemanager.html#writestring" class="tsd-kind-icon">write<wbr>String</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="filemanager.html#create" class="tsd-kind-icon">create</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="filemanager.html#createcloud" class="tsd-kind-icon">create<wbr>Cloud</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="filemanager.html#createlocal" class="tsd-kind-icon">create<wbr>Local</a>
 							</li>
 						</ul>
 					</li>
@@ -447,57 +834,15 @@ fmCloud.moveItem(<span class="hljs-string">"/TestFile.txt"</span>, <span class="
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Device | Drafts Script Reference</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for Drafts Script Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -82,18 +82,18 @@
 <span class="hljs-keyword">var</span> batteryLevel = device.batteryLevel;
 
 <span class="hljs-comment">// create and display it in an alert</span>
-<span class="hljs-keyword">var</span> s = <span class="hljs-string">"Model: "</span> + model + <span class="hljs-string">"\n"</span>;
-s = s + <span class="hljs-string">"System: "</span> + system + <span class="hljs-string">"\n"</span>;
-s = s + <span class="hljs-string">"OS: "</span> + osVersion + <span class="hljs-string">"\n"</span>;
-s = s + <span class="hljs-string">"Battery: "</span> + batteryLevel;
+<span class="hljs-keyword">var</span> s = <span class="hljs-string">&quot;Model: &quot;</span> + model + <span class="hljs-string">&quot;\n&quot;</span>;
+s = s + <span class="hljs-string">&quot;System: &quot;</span> + system + <span class="hljs-string">&quot;\n&quot;</span>;
+s = s + <span class="hljs-string">&quot;OS: &quot;</span> + osVersion + <span class="hljs-string">&quot;\n&quot;</span>;
+s = s + <span class="hljs-string">&quot;Battery: &quot;</span> + batteryLevel;
 alert(s);
 
 <span class="hljs-comment">// branch logic based on platform</span>
-<span class="hljs-keyword">if</span> (device.systemName == <span class="hljs-string">'macOS'</span>) {
+<span class="hljs-keyword">if</span> (device.systemName == <span class="hljs-string">&#x27;macOS&#x27;</span>) {
     <span class="hljs-comment">// do something only on Mac</span>
 }
 <span class="hljs-keyword">else</span> {
-    <span class="hljs-comment">// do somethign only on iOS</span>
+    <span class="hljs-comment">// do something only on iOS</span>
 }</code></pre>
 				</div>
 			</section>
@@ -109,25 +109,28 @@ alert(s);
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="device.html#batterylevel" class="tsd-kind-icon">battery<wbr>Level</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="device.html#model" class="tsd-kind-icon">model</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="device.html#systemname" class="tsd-kind-icon">system<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="device.html#systemversion" class="tsd-kind-icon">system<wbr>Version</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="device.html#batterylevel" class="tsd-kind-icon">battery<wbr>Level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="device.html#model" class="tsd-kind-icon">model</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="device.html#systemname" class="tsd-kind-icon">system<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="device.html#systemversion" class="tsd-kind-icon">system<wbr>Version</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="batterylevel" class="tsd-anchor"></a>
 					<h3>battery<wbr>Level</h3>
 					<div class="tsd-signature tsd-kind-icon">battery<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Device.d.ts#L50">Device.d.ts:50</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -135,11 +138,14 @@ alert(s);
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="model" class="tsd-anchor"></a>
 					<h3>model</h3>
 					<div class="tsd-signature tsd-kind-icon">model<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"iPhone"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"iPad"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Mac"</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Device.d.ts#L35">Device.d.ts:35</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -147,11 +153,14 @@ alert(s);
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="systemname" class="tsd-anchor"></a>
 					<h3>system<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">system<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"iOS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"macOS"</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Device.d.ts#L40">Device.d.ts:40</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -159,11 +168,14 @@ alert(s);
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="systemversion" class="tsd-anchor"></a>
 					<h3>system<wbr>Version</h3>
 					<div class="tsd-signature tsd-kind-icon">system<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Device.d.ts#L45">Device.d.ts:45</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -185,19 +197,19 @@ alert(s);
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-is-not-exported">
+					<li class="current tsd-kind-class">
 						<a href="device.html" class="tsd-kind-icon">Device</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="device.html#batterylevel" class="tsd-kind-icon">battery<wbr>Level</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="device.html#model" class="tsd-kind-icon">model</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="device.html#systemname" class="tsd-kind-icon">system<wbr>Name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="device.html#systemversion" class="tsd-kind-icon">system<wbr>Version</a>
 							</li>
 						</ul>
@@ -214,57 +226,15 @@ alert(s);
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>

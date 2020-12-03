@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>CallbackURL | Drafts Script Reference</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for Drafts Script Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -78,23 +78,23 @@
 					</a>
 					<pre><code class="language-javascript"><span class="hljs-comment">// Open callback URL for each line in a draft</span>
 <span class="hljs-comment">// Setup base Fantastical URL, with no parameters</span>
-<span class="hljs-keyword">const</span> baseURL = <span class="hljs-string">"fantastical2://x-callback-url/parse/"</span>;
+<span class="hljs-keyword">const</span> baseURL = <span class="hljs-string">&quot;fantastical2://x-callback-url/parse/&quot;</span>;
 
 <span class="hljs-comment">// split draft and loop over lines</span>
-<span class="hljs-keyword">var</span> lines = draft.content.split(<span class="hljs-string">"\n"</span>);
+<span class="hljs-keyword">var</span> lines = draft.content.split(<span class="hljs-string">&quot;\n&quot;</span>);
 <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> line <span class="hljs-keyword">of</span> lines) {
     <span class="hljs-comment">// create and configure callback object</span>
     <span class="hljs-keyword">var</span> cb = CallbackURL.create();
     cb.baseURL = baseURL;
-    cb.addParameter(<span class="hljs-string">"sentence"</span>, line);
+    cb.addParameter(<span class="hljs-string">&quot;sentence&quot;</span>, line);
     <span class="hljs-comment">// open and wait for result</span>
     <span class="hljs-keyword">var</span> success = cb.open();
     <span class="hljs-keyword">if</span> (success) {
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Event created"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Event created&quot;</span>);
     }
     <span class="hljs-keyword">else</span> { <span class="hljs-comment">// something went wrong or was cancelled</span>
           <span class="hljs-built_in">console</span>.log(cb.status);
-          <span class="hljs-keyword">if</span> (cb.status == <span class="hljs-string">"cancel"</span>) {
+          <span class="hljs-keyword">if</span> (cb.status == <span class="hljs-string">&quot;cancel&quot;</span>) {
             context.cancel();
         }
         <span class="hljs-keyword">else</span> {
@@ -116,34 +116,69 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="callbackurl.html#baseurl" class="tsd-kind-icon">baseURL</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="callbackurl.html#callbackresponse" class="tsd-kind-icon">callback<wbr>Response</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="callbackurl.html#parameters" class="tsd-kind-icon">parameters</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="callbackurl.html#status" class="tsd-kind-icon">status</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="callbackurl.html#waitforresponse" class="tsd-kind-icon">wait<wbr>For<wbr>Response</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="callbackurl.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="callbackurl.html#baseurl" class="tsd-kind-icon">baseURL</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="callbackurl.html#callbackresponse" class="tsd-kind-icon">callback<wbr>Response</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="callbackurl.html#parameters" class="tsd-kind-icon">parameters</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="callbackurl.html#status" class="tsd-kind-icon">status</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="callbackurl.html#url" class="tsd-kind-icon">url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="callbackurl.html#waitforresponse" class="tsd-kind-icon">wait<wbr>For<wbr>Response</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="callbackurl.html#addparameter" class="tsd-kind-icon">add<wbr>Parameter</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="callbackurl.html#open" class="tsd-kind-icon">open</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported"><a href="callbackurl.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="callbackurl.html#addparameter" class="tsd-kind-icon">add<wbr>Parameter</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="callbackurl.html#open" class="tsd-kind-icon">open</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="callbackurl.html#create" class="tsd-kind-icon">create</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>CallbackURL<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="callbackurl.html" class="tsd-signature-type">CallbackURL</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L90">CallbackURL.d.ts:90</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create new instance.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="callbackurl.html" class="tsd-signature-type">CallbackURL</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="baseurl" class="tsd-anchor"></a>
 					<h3>baseURL</h3>
 					<div class="tsd-signature tsd-kind-icon">baseURL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L43">CallbackURL.d.ts:43</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -151,11 +186,14 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="callbackresponse" class="tsd-anchor"></a>
 					<h3>callback<wbr>Response</h3>
-					<div class="tsd-signature tsd-kind-icon">callback<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<div class="tsd-signature tsd-kind-icon">callback<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L74">CallbackURL.d.ts:74</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -171,11 +209,14 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="parameters" class="tsd-anchor"></a>
 					<h3>parameters</h3>
-					<div class="tsd-signature tsd-kind-icon">parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<div class="tsd-signature tsd-kind-icon">parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L58">CallbackURL.d.ts:58</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -191,11 +232,14 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="status" class="tsd-anchor"></a>
 					<h3>status</h3>
 					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"created"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"success"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cancelled"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"error"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"timeout"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"invalid"</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L69">CallbackURL.d.ts:69</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -211,11 +255,29 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="url" class="tsd-anchor"></a>
+					<h3>url</h3>
+					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L48">CallbackURL.d.ts:48</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The current URL. This is provided as a debugging property, and will output the URL including the baseURL property with any configured parameters added. This property will differ from the actual URL opened when calling <code>open()</code> in that it will not contain the <code>x-success</code>, <code>x-error</code> and <code>x-cancel</code> parameters which are added dynamically at the time <code>open()</code> is called.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="waitforresponse" class="tsd-anchor"></a>
 					<h3>wait<wbr>For<wbr>Response</h3>
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L53">CallbackURL.d.ts:53</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -224,17 +286,20 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="addparameter" class="tsd-anchor"></a>
 					<h3>add<wbr>Parameter</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">add<wbr>Parameter<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L85">CallbackURL.d.ts:85</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -255,15 +320,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="open" class="tsd-anchor"></a>
 					<h3>open</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">open<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L79">CallbackURL.d.ts:79</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -274,15 +342,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="create" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> create</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="callbackurl.html" class="tsd-signature-type">CallbackURL</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/CallbackURL.d.ts#L90">CallbackURL.d.ts:90</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -307,31 +378,37 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-is-not-exported">
+					<li class="current tsd-kind-class">
 						<a href="callbackurl.html" class="tsd-kind-icon">CallbackURL</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="callbackurl.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="callbackurl.html#baseurl" class="tsd-kind-icon">baseURL</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="callbackurl.html#callbackresponse" class="tsd-kind-icon">callback<wbr>Response</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="callbackurl.html#parameters" class="tsd-kind-icon">parameters</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="callbackurl.html#status" class="tsd-kind-icon">status</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="callbackurl.html#url" class="tsd-kind-icon">url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="callbackurl.html#waitforresponse" class="tsd-kind-icon">wait<wbr>For<wbr>Response</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="callbackurl.html#addparameter" class="tsd-kind-icon">add<wbr>Parameter</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="callbackurl.html#open" class="tsd-kind-icon">open</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="callbackurl.html#create" class="tsd-kind-icon">create</a>
 							</li>
 						</ul>
@@ -348,57 +425,15 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>

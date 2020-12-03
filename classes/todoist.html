@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Todoist | Drafts Script Reference</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for Drafts Script Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -83,8 +83,8 @@
 <span class="hljs-keyword">let</span> todoist = Todoist.create();
 <span class="hljs-comment">// create task in inbox</span>
 todoist.createTask({
-  <span class="hljs-string">"content"</span>: <span class="hljs-string">"My Task Name"</span>,
-  <span class="hljs-string">"due_string"</span>: <span class="hljs-string">"Next wednesday"</span>
+  <span class="hljs-string">&quot;content&quot;</span>: <span class="hljs-string">&quot;My Task Name&quot;</span>,
+  <span class="hljs-string">&quot;due_string&quot;</span>: <span class="hljs-string">&quot;Next wednesday&quot;</span>
 });</code></pre>
 				</div>
 			</section>
@@ -100,49 +100,89 @@ todoist.createTask({
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#lasterror" class="tsd-kind-icon">last<wbr>Error</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#lastresponse" class="tsd-kind-icon">last<wbr>Response</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="todoist.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="todoist.html#lasterror" class="tsd-kind-icon">last<wbr>Error</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="todoist.html#lastresponse" class="tsd-kind-icon">last<wbr>Response</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#closetask" class="tsd-kind-icon">close<wbr>Task</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#createcomment" class="tsd-kind-icon">create<wbr>Comment</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#createlabel" class="tsd-kind-icon">create<wbr>Label</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#createproject" class="tsd-kind-icon">create<wbr>Project</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#createtask" class="tsd-kind-icon">create<wbr>Task</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#getcomment" class="tsd-kind-icon">get<wbr>Comment</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#getcomments" class="tsd-kind-icon">get<wbr>Comments</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#getlabel" class="tsd-kind-icon">get<wbr>Label</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#getlabels" class="tsd-kind-icon">get<wbr>Labels</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#getproject" class="tsd-kind-icon">get<wbr>Project</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#getprojects" class="tsd-kind-icon">get<wbr>Projects</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#gettask" class="tsd-kind-icon">get<wbr>Task</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#gettasks" class="tsd-kind-icon">get<wbr>Tasks</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#quickadd" class="tsd-kind-icon">quick<wbr>Add</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#reopentask" class="tsd-kind-icon">reopen<wbr>Task</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#request" class="tsd-kind-icon">request</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#updatecomment" class="tsd-kind-icon">update<wbr>Comment</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#updatelabel" class="tsd-kind-icon">update<wbr>Label</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#updateproject" class="tsd-kind-icon">update<wbr>Project</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="todoist.html#updatetask" class="tsd-kind-icon">update<wbr>Task</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported"><a href="todoist.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#closetask" class="tsd-kind-icon">close<wbr>Task</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#createcomment" class="tsd-kind-icon">create<wbr>Comment</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#createlabel" class="tsd-kind-icon">create<wbr>Label</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#createproject" class="tsd-kind-icon">create<wbr>Project</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#createtask" class="tsd-kind-icon">create<wbr>Task</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#getcomment" class="tsd-kind-icon">get<wbr>Comment</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#getcomments" class="tsd-kind-icon">get<wbr>Comments</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#getlabel" class="tsd-kind-icon">get<wbr>Label</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#getlabels" class="tsd-kind-icon">get<wbr>Labels</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#getproject" class="tsd-kind-icon">get<wbr>Project</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#getprojects" class="tsd-kind-icon">get<wbr>Projects</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#gettask" class="tsd-kind-icon">get<wbr>Task</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#gettasks" class="tsd-kind-icon">get<wbr>Tasks</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#quickadd" class="tsd-kind-icon">quick<wbr>Add</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#reopentask" class="tsd-kind-icon">reopen<wbr>Task</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#request" class="tsd-kind-icon">request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#updatecomment" class="tsd-kind-icon">update<wbr>Comment</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#updatelabel" class="tsd-kind-icon">update<wbr>Label</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#updateproject" class="tsd-kind-icon">update<wbr>Project</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="todoist.html#updatetask" class="tsd-kind-icon">update<wbr>Task</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="todoist.html#create" class="tsd-kind-icon">create</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Todoist<span class="tsd-signature-symbol">(</span>identifier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="todoist.html" class="tsd-signature-type">Todoist</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L103">Todoist.d.ts:103</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create new instance.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> identifier: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="todoist.html" class="tsd-signature-type">Todoist</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="lasterror" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> last<wbr>Error</h3>
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L35">Todoist.d.ts:35</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -150,11 +190,14 @@ todoist.createTask({
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="lastresponse" class="tsd-anchor"></a>
 					<h3>last<wbr>Response</h3>
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L30">Todoist.d.ts:30</a></li>
+						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
@@ -163,17 +206,20 @@ todoist.createTask({
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="closetask" class="tsd-anchor"></a>
 					<h3>close<wbr>Task</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">close<wbr>Task<span class="tsd-signature-symbol">(</span>taskId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L55">Todoist.d.ts:55</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -190,15 +236,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="createcomment" class="tsd-anchor"></a>
 					<h3>create<wbr>Comment</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">create<wbr>Comment<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L70">Todoist.d.ts:70</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -210,15 +259,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="createlabel" class="tsd-anchor"></a>
 					<h3>create<wbr>Label</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">create<wbr>Label<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L76">Todoist.d.ts:76</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -230,15 +282,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="createproject" class="tsd-anchor"></a>
 					<h3>create<wbr>Project</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">create<wbr>Project<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L64">Todoist.d.ts:64</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -250,15 +305,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="createtask" class="tsd-anchor"></a>
 					<h3>create<wbr>Task</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">create<wbr>Task<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L48">Todoist.d.ts:48</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -270,15 +328,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getcomment" class="tsd-anchor"></a>
 					<h3>get<wbr>Comment</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Comment<span class="tsd-signature-symbol">(</span>commentId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L71">Todoist.d.ts:71</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -290,15 +351,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getcomments" class="tsd-anchor"></a>
 					<h3>get<wbr>Comments</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Comments<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L69">Todoist.d.ts:69</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -310,15 +374,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getlabel" class="tsd-anchor"></a>
 					<h3>get<wbr>Label</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Label<span class="tsd-signature-symbol">(</span>labelId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L77">Todoist.d.ts:77</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -330,29 +397,35 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getlabels" class="tsd-anchor"></a>
 					<h3>get<wbr>Labels</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Labels<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L75">Todoist.d.ts:75</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getproject" class="tsd-anchor"></a>
 					<h3>get<wbr>Project</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Project<span class="tsd-signature-symbol">(</span>projectId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L65">Todoist.d.ts:65</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -364,29 +437,35 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getprojects" class="tsd-anchor"></a>
 					<h3>get<wbr>Projects</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Projects<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L63">Todoist.d.ts:63</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="gettask" class="tsd-anchor"></a>
 					<h3>get<wbr>Task</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Task<span class="tsd-signature-symbol">(</span>taskId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L49">Todoist.d.ts:49</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -398,15 +477,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="gettasks" class="tsd-anchor"></a>
 					<h3>get<wbr>Tasks</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Tasks<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L47">Todoist.d.ts:47</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -418,15 +500,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="quickadd" class="tsd-anchor"></a>
 					<h3>quick<wbr>Add</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">quick<wbr>Add<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, reminder<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">quick<wbr>Add<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, reminder<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L44">Todoist.d.ts:44</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 							</div>
@@ -450,21 +535,30 @@ todoist.createTask({
 										<p>Optional natural language date specifying for creating a task reminder.</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional dictionary of additional parameters to include in the request.</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
 							<p>Object containing respose data from Todoist.</p>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="reopentask" class="tsd-anchor"></a>
 					<h3>reopen<wbr>Task</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">reopen<wbr>Task<span class="tsd-signature-symbol">(</span>taskId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L60">Todoist.d.ts:60</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -481,15 +575,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="request" class="tsd-anchor"></a>
 					<h3>request</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">request<span class="tsd-signature-symbol">(</span>settings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="httpresponse.html" class="tsd-signature-type">HTTPResponse</a></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">request<span class="tsd-signature-symbol">(</span>settings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>headers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>parameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="httpresponse.html" class="tsd-signature-type">HTTPResponse</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L86">Todoist.d.ts:86</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -499,13 +596,13 @@ todoist.createTask({
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>settings: <span class="tsd-signature-type">object</span></h5>
+									<h5>settings: <span class="tsd-signature-symbol">{ </span>data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>headers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>parameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>an object configuring the request.</p>
 									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span></h5>
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span></h5>
 											<div class="tsd-comment tsd-typography">
 												<div class="lead">
 													<p>A JavaScript object containing data to be encoded into the HTTP body of the request.</p>
@@ -518,7 +615,7 @@ todoist.createTask({
 											</ul>
 										</li>
 										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> headers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span></h5>
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> headers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span></h5>
 											<div class="tsd-comment tsd-typography">
 												<div class="lead">
 													<p>An object contain key-values to be added as custom headers in the request. There is no need to provide authorization headers, Drafts will add those.</p>
@@ -539,7 +636,7 @@ todoist.createTask({
 											</div>
 										</li>
 										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> parameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span></h5>
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> parameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span></h5>
 											<div class="tsd-comment tsd-typography">
 												<div class="lead">
 													<p>An object containing key-values to be added to the request as URL parameters.</p>
@@ -566,15 +663,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="updatecomment" class="tsd-anchor"></a>
 					<h3>update<wbr>Comment</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">update<wbr>Comment<span class="tsd-signature-symbol">(</span>commentId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L72">Todoist.d.ts:72</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -589,15 +689,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="updatelabel" class="tsd-anchor"></a>
 					<h3>update<wbr>Label</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">update<wbr>Label<span class="tsd-signature-symbol">(</span>labelId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L78">Todoist.d.ts:78</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -612,15 +715,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="updateproject" class="tsd-anchor"></a>
 					<h3>update<wbr>Project</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">update<wbr>Project<span class="tsd-signature-symbol">(</span>projectId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L66">Todoist.d.ts:66</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -635,15 +741,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="updatetask" class="tsd-anchor"></a>
 					<h3>update<wbr>Task</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">update<wbr>Task<span class="tsd-signature-symbol">(</span>taskId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L50">Todoist.d.ts:50</a></li>
+								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -658,15 +767,18 @@ todoist.createTask({
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="create" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> create</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>identifier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="todoist.html" class="tsd-signature-type">Todoist</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/agiletortoise/drafts-script-reference/blob/73fbb8d/src/Todoist.d.ts#L103">Todoist.d.ts:103</a></li>
+								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -678,7 +790,7 @@ todoist.createTask({
 								<li>
 									<h5>identifier: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Optional string value used to identify a Todoist account. Typically this can be omitted if you only work with one Todoist account in Drafts. Each unique identifier used for Twitter accounts will share credentials - across both action steps and scripts.</p>
+										<p>Optional string value used to identify a Todoist account. Typically this can be omitted if you only work with one Todoist account in Drafts. Each unique identifier used for Todoist accounts will share credentials - across both action steps and scripts.</p>
 									</div>
 								</li>
 							</ul>
@@ -700,76 +812,79 @@ todoist.createTask({
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-is-not-exported">
+					<li class="current tsd-kind-class">
 						<a href="todoist.html" class="tsd-kind-icon">Todoist</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="todoist.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="todoist.html#lasterror" class="tsd-kind-icon">last<wbr>Error</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="todoist.html#lastresponse" class="tsd-kind-icon">last<wbr>Response</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#closetask" class="tsd-kind-icon">close<wbr>Task</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#createcomment" class="tsd-kind-icon">create<wbr>Comment</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#createlabel" class="tsd-kind-icon">create<wbr>Label</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#createproject" class="tsd-kind-icon">create<wbr>Project</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#createtask" class="tsd-kind-icon">create<wbr>Task</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#getcomment" class="tsd-kind-icon">get<wbr>Comment</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#getcomments" class="tsd-kind-icon">get<wbr>Comments</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#getlabel" class="tsd-kind-icon">get<wbr>Label</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#getlabels" class="tsd-kind-icon">get<wbr>Labels</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#getproject" class="tsd-kind-icon">get<wbr>Project</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#getprojects" class="tsd-kind-icon">get<wbr>Projects</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#gettask" class="tsd-kind-icon">get<wbr>Task</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#gettasks" class="tsd-kind-icon">get<wbr>Tasks</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#quickadd" class="tsd-kind-icon">quick<wbr>Add</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#reopentask" class="tsd-kind-icon">reopen<wbr>Task</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#request" class="tsd-kind-icon">request</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#updatecomment" class="tsd-kind-icon">update<wbr>Comment</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#updatelabel" class="tsd-kind-icon">update<wbr>Label</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#updateproject" class="tsd-kind-icon">update<wbr>Project</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="todoist.html#updatetask" class="tsd-kind-icon">update<wbr>Task</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="todoist.html#create" class="tsd-kind-icon">create</a>
 							</li>
 						</ul>
@@ -786,57 +901,15 @@ todoist.createTask({
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
